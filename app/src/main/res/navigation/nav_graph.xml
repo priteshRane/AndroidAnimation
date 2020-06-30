@@ -14,5 +14,42 @@
         android:id="@+id/propertyAnimationFragment"
         android:name="com.ransoft.androidanimation.ui.propertyanimation.PropertyAnimationFragment"
         android:label="Property Animation"
-        tools:layout="@layout/property_animation_fragment" />
+        tools:layout="@layout/property_animation_fragment" >
+        <action
+            android:id="@+id/actionGoToValueAnimator"
+            app:destination="@id/valueAnimatorFragment" />
+        <action
+            android:id="@+id/actionGoToObjectAnimator"
+            app:destination="@id/objectAnimatorFragment" />
+        <action
+            android:id="@+id/actionGoToAnimatorSet"
+            app:destination="@id/animatorSetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/valueAnimatorFragment"
+        android:name="com.ransoft.androidanimation.ui.propertyanimation.valueanimator.ValueAnimatorFragment"
+        android:label="Value Animator"
+        tools:layout="@layout/value_animator_fragment">
+        <action
+            android:id="@+id/actionGoToPropertyAnimation"
+            app:destination="@id/propertyAnimationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/objectAnimatorFragment"
+        android:name="com.ransoft.androidanimation.ui.propertyanimation.objectanimator.ObjectAnimatorFragment"
+        android:label="Object Animator"
+        tools:layout="@layout/object_animator_fragment" >
+        <action
+            android:id="@+id/actionGoToPropertyAnimation"
+            app:destination="@id/propertyAnimationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/animatorSetFragment"
+        android:name="com.ransoft.androidanimation.ui.propertyanimation.animatorset.AnimatorSetFragment"
+        android:label="Animator Set"
+        tools:layout="@layout/animator_set_fragment">
+        <action
+            android:id="@+id/actionGoToPropertyAnimation"
+            app:destination="@id/propertyAnimationFragment" />
+    </fragment>
 </navigation>

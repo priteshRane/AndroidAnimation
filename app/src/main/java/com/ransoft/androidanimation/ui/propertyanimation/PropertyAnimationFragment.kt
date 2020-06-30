@@ -6,7 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import com.ransoft.androidanimation.R
+import kotlinx.android.synthetic.main.property_animation_fragment.*
 
 class PropertyAnimationFragment : Fragment() {
 
@@ -25,8 +28,22 @@ class PropertyAnimationFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(PropertyAnimationViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(PropertyAnimationViewModel::class.java)
         // TODO: Use the ViewModel
-    }
 
+        btn_value_animator.setOnClickListener {
+            val action = PropertyAnimationFragmentDirections.actionGoToValueAnimator()
+            Navigation.findNavController(it).navigate(action)
+        }
+
+        btn_object_animator.setOnClickListener {
+            val action = PropertyAnimationFragmentDirections.actionGoToObjectAnimator()
+            Navigation.findNavController(it).navigate(action)
+        }
+
+        btn_animator_Set.setOnClickListener {
+            val action = PropertyAnimationFragmentDirections.actionGoToAnimatorSet()
+            Navigation.findNavController(it).navigate(action)
+        }
+    }
 }
