@@ -6,4 +6,7 @@
     <string name="will_start_in">Will start in</string>
     <string name="object_animator">Object Animator</string>
     <string name="animator_set">Animator Set</string>
+    <string name="drawable_graphics">Drawable Graphics</string>
+    <string name="animate_drawable">Animate Drawable</string>
+    <string name="animate_vector_drawable">Animate vector drawable</string>
 </resources>

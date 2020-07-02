@@ -52,4 +52,34 @@
             android:id="@+id/actionGoToPropertyAnimation"
             app:destination="@id/propertyAnimationFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/animateDrawableFragment"
+        android:name="com.ransoft.androidanimation.ui.drawablegraphics.animatedrawable.AnimateDrawableFragment"
+        android:label="Animate Drawables"
+        tools:layout="@layout/animate_drawable_fragment">
+        <action
+            android:id="@+id/actionGoToDrawableGraphics"
+            app:destination="@id/drawableGraphicsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/drawableGraphicsFragment"
+        android:name="com.ransoft.androidanimation.ui.drawablegraphics.DrawableGraphicsFragment"
+        android:label="Drawable Graphics"
+        tools:layout="@layout/drawable_graphics_fragment">
+        <action
+            android:id="@+id/actionGoToAnimateDrawable"
+            app:destination="@id/animateDrawableFragment" />
+        <action
+            android:id="@+id/actionGoToAnimateVectorDrawable"
+            app:destination="@id/animateVectorDrawableFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/animateVectorDrawableFragment"
+        android:name="com.ransoft.androidanimation.ui.drawablegraphics.animatevectordrawable.AnimateVectorDrawableFragment"
+        android:label="Animate Vector Drawable"
+        tools:layout="@layout/animate_vector_drawable_fragment">
+        <action
+            android:id="@+id/actionGoToDrawableGraphics"
+            app:destination="@id/drawableGraphicsFragment" />
+    </fragment>
 </navigation>

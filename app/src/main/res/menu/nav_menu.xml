@@ -7,4 +7,8 @@
     <item
         android:title="@string/property_animation"
         android:id="@+id/propertyAnimationFragment"/>
+
+    <item
+        android:title="@string/drawable_graphics"
+        android:id="@+id/drawableGraphicsFragment"/>
 </menu>
