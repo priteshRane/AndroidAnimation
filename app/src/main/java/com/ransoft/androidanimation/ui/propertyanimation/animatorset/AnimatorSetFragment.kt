@@ -48,5 +48,4 @@ class AnimatorSetFragment : Fragment() {
             start()
         }
     }
-
 }
